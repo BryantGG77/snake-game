@@ -7,19 +7,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <script src="./script.js" type="text/javascript" defer></script>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="/assets/8582868.png">
     <title>Snake Game</title>
 </head>
 
 <body>
-    <section id="board"></section>
+    <header></header>
 
-    <section class="boardInfo">
-        <div>
-            Score: <div id="scoreBoard"></div>
-        </div>
-        <button id="start">Start</button>
-    </section>
-    <section id="gameOver">Game Over</section>
+    <main>
+
+        <h1 id="title">Snake Game</h1>
+        <p class="instructions">Pulsa el botón para <span class="instructionsSpan">jugar</span></p>
+
+        <section id="board"></section>
+
+        <section class="boardInfo">
+            <div class="score">
+                Score: <div id="scoreBoard"></div>
+            </div>
+            <button id="start">Jugar</button>
+        </section>
+
+        <section id="gameOver">Lo siento, has perdido 😩</section>
+
+    </main>
+
+    <footer></footer>
 </body>
 
 </html>

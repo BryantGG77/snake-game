@@ -1,24 +1,54 @@
 * {
     font-family: 'Share Tech Mono', monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --color-primary: #75ed71;
+    --color-secondary: #fc4356;
+    --color-background: #81c1f6;
+
+}
+
+body {
+    background-color: var(--color-background);
 }
 
 #board,
-.boardInfo {
+#gameOver,
+#title,
+.boardInfo,
+.instructions {
     max-width: 500px;
+    margin: 20px;
+}
+
+#title {
+    -webkit-text-stroke: .2px rgb(0, 0, 0);
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.instructions {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.instructionsSpan {
+    color: red;
+    font-weight: bold;
 }
 
 #board {
+
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(10, 1fr);
-}
-
-#start,
-.boardInfo {
-    font-size: 25px;
-}
-
-#gameOver {
-    display: none;
+    border: 3px solid #000000;
 }
 
 .boardInfo {
@@ -27,28 +57,61 @@
     margin-top: 10px;
 }
 
+#start,
+#gameOver,
+.boardInfo,
+.instructions {
+    font-size: 25px;
+    font-weight: 600;
+}
+
 #start {
-    background-color: #f35a69;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--color-secondary);
     border: none;
     color: white;
+}
+
+#start:hover {
+    background-color: #ee273b;
 }
 
 #scoreBoard {
     display: inline-flex;
 }
 
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameOver {
+    color: red;
+    padding-top: 20px;
+    display: none;
+    text-align: center;
+}
+
+
 .square {
     aspect-ratio: 1;
+
 }
 
 .emptySquare {
-    background-color: #456990;
+    background-color: transparent;
 }
 
 .snakeSquare {
-    background-color: #ccf47f;
+    background-color: var(--color-primary);
+    border: 1px solid #141414;
 }
 
 .foodSquare {
-    background-color: #f35a69;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 50%;
 }
